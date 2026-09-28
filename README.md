@@ -102,18 +102,4 @@ Running `npm run test:report` automatically creates a visual report with:
 * Request headers, URLs, and payloads.
 * Response body formatting and exact assertion results.
 
----
 
-## 🎯 Junior QA Interview Cheat Sheet
-
-### 1. "Can you tell me about your API testing project?"
-> *"I built an automated REST API test suite for the Restful-Booker hotel reservation API using Postman and Newman. I automated the full CRUD lifecycle—authenticating with an admin token, creating a booking, fetching details, updating via PUT/PATCH, and deleting the resource. I also included negative test cases to verify that deleted records return a 404 Not Found and unauthorized requests return a 403 Forbidden."*
-
-### 2. "What is the difference between PUT and PATCH?"
-> *"PUT replaces the **entire** resource (you must send all fields). PATCH updates only the **specific fields** you want to change (like just updating the guest's checkout date)."*
-
-### 3. "What HTTP status codes did you test?"
-* **200 OK:** Successful GET, POST auth, and PUT/PATCH updates.
-* **201 Created:** Successful resource creation or deletion response.
-* **403 Forbidden:** Unauthorized action attempted with an invalid/missing token.
-* **404 Not Found:** Resource does not exist (verified by querying a deleted booking ID).
