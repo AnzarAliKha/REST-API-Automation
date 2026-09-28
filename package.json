@@ -1,0 +1,26 @@
+{
+  "name": "restful-booker-api-suite",
+  "version": "1.0.0",
+  "description": "Automated REST API Test Suite for Restful-Booker using Postman, Newman, and HTML Extra Reporter",
+  "main": "tests/api-runner.js",
+  "scripts": {
+    "test": "newman run postman/RestfulBooker_Collection.json -e postman/RestfulBooker_Environment.json --reporters cli",
+    "test:report": "newman run postman/RestfulBooker_Collection.json -e postman/RestfulBooker_Environment.json --reporters cli,htmlextra --reporter-htmlextra-export reports/api-execution-report.html",
+    "test:code": "node tests/api-runner.js"
+  },
+  "keywords": [
+    "postman",
+    "newman",
+    "api-testing",
+    "rest-api",
+    "restful-booker",
+    "qa-automation",
+    "junior-sdet"
+  ],
+  "author": "Anzar Ali",
+  "license": "MIT",
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
